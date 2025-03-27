@@ -6,7 +6,7 @@ import { ArrowRight, Star } from "lucide-react";
 const projectCategories = [
   {
     title: "Bespoke Kitchens",
-    description: "Custom-designed and hand-built kitchens tailored to each client's specific needs and space. Our kitchen projects combine functionality with beautiful craftsmanship.",
+    description: "Custom-designed and hand-built kitchens tailored to each client&apos;s specific needs and space. Our kitchen projects combine functionality with beautiful craftsmanship.",
     projectCount: 15,
     rating: 5,
   },
@@ -131,7 +131,7 @@ export function PreviousWork() {
                       />
                     ))}
                   </div>
-                  <p className="text-gray-600 mb-4">"{testimonial.quote}"</p>
+                  <p className="text-gray-600 mb-4">&quot;{testimonial.quote}&quot;</p>
                   <p className="text-sm font-medium text-gray-900">
                     {testimonial.author}
                   </p>
