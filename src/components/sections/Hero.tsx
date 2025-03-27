@@ -111,7 +111,7 @@ export function Hero() {
               <div>
                 <h3 className="text-xl font-semibold">Our Commitment</h3>
                 <p className="mt-4 text-gray-600">
-                  Wright Angle looks forward to discussing your future projects and offering our expert advice to help turn concepts into reality - whether it's bespoke shelving, a new kitchen, or a conversion.
+                  Wright Angle looks forward to discussing your future projects and offering our expert advice to help turn concepts into reality - whether it&apos;s bespoke shelving, a new kitchen, or a conversion.
                 </p>
               </div>
             </div>
