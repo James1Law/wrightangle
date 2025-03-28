@@ -2,60 +2,46 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
+import { Background } from "@/components/ui/background";
+import Image from "next/image";
 
 const projectCategories = [
   {
-    title: "Bespoke Kitchens",
-    description: "Custom-designed and hand-built kitchens tailored to each client&apos;s specific needs and space. Our kitchen projects combine functionality with beautiful craftsmanship.",
-    projectCount: 15,
-    rating: 5,
+    title: "Conversions",
+    description: "Complete property transformations, from loft conversions to garage conversions, maximising your living space.",
+    image: "/images/conversions.webp"
   },
   {
     title: "Fitted Wardrobes",
-    description: "Space-saving storage solutions and fitted wardrobes that maximise your space while maintaining aesthetic appeal. Each piece is carefully designed to fit perfectly.",
-    projectCount: 23,
-    rating: 5,
+    description: "Custom-designed storage solutions to maximise your space while maintaining aesthetic appeal.",
+    image: "/images/fitted-furniture.webp"
   },
   {
-    title: "Home Libraries",
-    description: "Custom bookcases and library installations that transform spaces into beautiful, functional reading rooms. Perfect for book lovers and collectors.",
-    projectCount: 8,
-    rating: 5,
-  },
-  {
-    title: "Property Renovations",
-    description: "Complete property renovations and refurbishments, from single rooms to entire houses. We handle everything from design to final implementation.",
-    projectCount: 12,
-    rating: 5,
-  },
-  {
-    title: "Outdoor Spaces",
-    description: "Decking, garden structures, and outdoor living spaces that extend your home into the garden. Built to last with materials chosen for durability.",
-    projectCount: 18,
-    rating: 5,
-  },
+    title: "Decking",
+    description: "Beautiful outdoor living spaces created with high-quality materials and expert craftsmanship.",
+    image: "/images/decking.webp"
+  }
 ];
 
 const testimonials = [
   {
-    quote: "Exceptional attention to detail and craftsmanship. The fitted wardrobes transformed our bedroom.",
-    author: "Sarah, Eastbourne",
+    quote: "Excellent work, very professional and friendly service. Would highly recommend.",
+    author: "Sarah T."
   },
   {
-    quote: "Professional, reliable, and the quality of work is outstanding. Highly recommend for any carpentry needs.",
-    author: "Mike, Brighton",
+    quote: "James did a fantastic job on our fitted wardrobes. The attention to detail was impressive.",
+    author: "Mike R."
   },
   {
-    quote: "The kitchen renovation exceeded our expectations. Great communication throughout the project.",
-    author: "Emma, London",
-  },
+    quote: "Very reliable and professional. The quality of work was outstanding.",
+    author: "David P."
+  }
 ];
 
 export function PreviousWork() {
   return (
     <div className="relative overflow-hidden bg-white">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:14px_24px]" />
+      <Background />
       
       <div className="relative">
         <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
@@ -75,37 +61,21 @@ export function PreviousWork() {
               {projectCategories.map((category) => (
                 <div
                   key={category.title}
-                  className="flex flex-col rounded-2xl border bg-white/50 p-8 backdrop-blur transition-all hover:shadow-lg"
+                  className="group relative aspect-[4/3] overflow-hidden rounded-2xl"
                 >
-                  {/* Placeholder for future image */}
-                  <div className="aspect-[4/3] w-full rounded-xl bg-gray-100 mb-6">
-                    <div className="flex h-full items-center justify-center text-gray-400">
-                      Image placeholder
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <h2 className="text-2xl font-bold text-gray-900">
+                  <Image
+                    src={category.image}
+                    alt={category.title}
+                    fill
+                    className="object-cover transition-transform group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 p-6 flex flex-col justify-end">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       {category.title}
-                    </h2>
-                    <div className="flex items-center gap-1">
-                      <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm text-gray-600">{category.rating}.0</span>
-                    </div>
-                  </div>
-                  
-                  <p className="flex-1 text-gray-600 mb-4">
-                    {category.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">
-                      {category.projectCount} projects completed
-                    </span>
-                    <Button variant="outline" size="sm" className="gap-2">
-                      View Projects
-                      <ArrowRight className="h-4 w-4" />
-                    </Button>
+                    </h3>
+                    <p className="text-sm text-gray-200">
+                      {category.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -121,39 +91,35 @@ export function PreviousWork() {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="rounded-xl border bg-white/50 p-6 backdrop-blur"
+                  className="rounded-2xl border bg-white/50 p-6 backdrop-blur"
                 >
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                        className="h-5 w-5 text-yellow-400 fill-yellow-400"
                       />
                     ))}
                   </div>
-                  <p className="text-gray-600 mb-4">&quot;{testimonial.quote}&quot;</p>
-                  <p className="text-sm font-medium text-gray-900">
-                    {testimonial.author}
-                  </p>
+                  <blockquote className="text-gray-600 mb-4">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </blockquote>
+                  <cite className="text-sm font-medium text-gray-900 not-italic">
+                    - {testimonial.author}
+                  </cite>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Call to Action */}
-          <div className="mx-auto max-w-3xl mt-16">
-            <div className="rounded-2xl bg-gray-50/50 p-8 backdrop-blur text-center">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Ready to Start Your Project?
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Let&apos;s discuss your ideas and create something amazing together. Contact us for a free consultation and estimate.
-              </p>
-              <Button size="lg" className="gap-2">
+          <div className="mx-auto max-w-3xl mt-16 text-center">
+            <Button size="lg" className="gap-2" asChild>
+              <a href="/contact" className="flex items-center gap-2">
                 Get Free Estimate
                 <ArrowRight className="h-4 w-4" />
-              </Button>
-            </div>
+              </a>
+            </Button>
           </div>
         </div>
       </div>

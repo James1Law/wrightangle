@@ -2,12 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Background } from "@/components/ui/background";
 
 export function About() {
   return (
     <div className="relative overflow-hidden bg-white">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:14px_24px]" />
+      <Background />
       
       <div className="relative">
         <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">

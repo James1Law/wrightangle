@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -19,31 +19,35 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="container mx-auto px-4">
-        {/* Top bar with contact info */}
-        <div className="hidden border-b py-2 md:flex md:items-center md:justify-end md:space-x-6">
-          <a
-            href="tel:07753958395"
-            className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900"
-          >
-            <Phone className="h-4 w-4" />
-            <span>07753958395</span>
-          </a>
-          <a
-            href="mailto:james@wrightanglecarpentry.co.uk"
-            className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900"
-          >
-            <Mail className="h-4 w-4" />
-            <span>james@wrightanglecarpentry.co.uk</span>
-          </a>
+    <header className="sticky top-0 z-50 w-full bg-[#F5F5F5]/95 backdrop-blur supports-[backdrop-filter]:bg-[#F5F5F5]/90">
+      {/* Top bar with contact info */}
+      <div className="hidden border-b border-gray-200 bg-[#F5F5F5] md:block">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-end space-x-6 py-2">
+            <a
+              href="tel:07753958395"
+              className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900"
+            >
+              <Phone className="h-4 w-4" />
+              <span>07753958395</span>
+            </a>
+            <a
+              href="mailto:james@wrightanglecarpentry.co.uk"
+              className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900"
+            >
+              <Mail className="h-4 w-4" />
+              <span>james@wrightanglecarpentry.co.uk</span>
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div className="flex h-16 items-center justify-between">
+      <div className="container mx-auto px-4">
+        <div className="flex h-24 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="relative h-40 w-40">
+              <div className="relative h-20 w-20 sm:h-24 sm:w-24">
                 <Image
                   src="/wrightlogo.png"
                   alt="Wright Angle Carpentry"
@@ -80,31 +84,39 @@ export function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col space-y-4 px-6">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] p-0">
+              <SheetTitle className="px-6 pt-6 pb-2 text-lg font-semibold text-gray-900 border-b">
+                Menu
+              </SheetTitle>
+              <nav className="flex flex-col">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-lg font-medium text-gray-600 hover:text-gray-900 py-2"
+                    className="px-6 py-3 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
                   </Link>
                 ))}
-                <div className="mt-6 space-y-4 border-t pt-6">
+                <div className="mt-4 space-y-1 border-t px-6 py-4 bg-gray-50">
+                  <h3 className="text-sm font-medium text-gray-500 mb-3">Contact Us</h3>
                   <a
                     href="tel:07753958395"
-                    className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 py-2"
+                    className="flex items-center gap-3 py-2.5 text-sm text-gray-600 hover:text-gray-900 rounded-md hover:bg-gray-100 px-3 transition-colors"
                   >
-                    <Phone className="h-4 w-4" />
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100">
+                      <Phone className="h-4 w-4 text-gray-600" />
+                    </div>
                     <span>07753958395</span>
                   </a>
                   <a
                     href="mailto:james@wrightanglecarpentry.co.uk"
-                    className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 py-2"
+                    className="flex items-center gap-3 py-2.5 text-sm text-gray-600 hover:text-gray-900 rounded-md hover:bg-gray-100 px-3 transition-colors"
                   >
-                    <Mail className="h-4 w-4" />
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100">
+                      <Mail className="h-4 w-4 text-gray-600" />
+                    </div>
                     <span>james@wrightanglecarpentry.co.uk</span>
                   </a>
                 </div>
