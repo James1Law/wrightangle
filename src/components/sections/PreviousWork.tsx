@@ -12,7 +12,7 @@ const projectCategories = [
   },
   {
     title: "Fitted Wardrobes",
-    description: "Space-saving storage solutions and fitted wardrobes that maximize your space while maintaining aesthetic appeal. Each piece is carefully designed to fit perfectly.",
+    description: "Space-saving storage solutions and fitted wardrobes that maximise your space while maintaining aesthetic appeal. Each piece is carefully designed to fit perfectly.",
     projectCount: 23,
     rating: 5,
   },

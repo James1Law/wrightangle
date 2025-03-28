@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 const services = [
   {
     title: "Fitted furniture",
-    description: "We take great pride in the projects we undertake. With interior carpentry there is a higher requirement for attention to detail and precision. Our fitted furniture solutions are custom-designed to maximize your space while maintaining aesthetic appeal.",
+    description: "We take great pride in the projects we undertake. With interior carpentry there is a higher requirement for attention to detail and precision. Our fitted furniture solutions are custom-designed to maximise your space while maintaining aesthetic appeal.",
     link: "/services/fitted-furniture"
   },
   {
@@ -21,7 +21,7 @@ const services = [
   },
   {
     title: "Interior Carpentry",
-    description: "From custom bookcases and shelving to doors and trim work, our interior carpentry services combine functionality with beautiful craftsmanship. We specialize in creating bespoke interior solutions that perfectly match your space and style.",
+    description: "From custom bookcases and shelving to doors and trim work, our interior carpentry services combine functionality with beautiful craftsmanship. We specialise in creating bespoke interior solutions that perfectly match your space and style.",
     link: "/services/interior-carpentry"
   },
   {

@@ -28,7 +28,7 @@ const contactMethods = [
     icon: Clock,
     title: "Response Time",
     value: "Within 24 hours",
-    description: "Quick response for all inquiries and estimates",
+    description: "Quick response for all enquiries and estimates",
   },
 ];
 
