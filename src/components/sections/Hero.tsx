@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Shield, ArrowRight } from "lucide-react";
-import { Background } from "@/components/ui/background";
 import Image from "next/image";
 import Link from "next/link";
 
