@@ -61,49 +61,49 @@ export function Contact() {
 
           {/* Contact Methods Grid */}
           <div className="mx-auto max-w-5xl">
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2">
               {contactMethods.map((method) => (
                 <div
                   key={method.title}
-                  className="rounded-2xl border bg-white/50 p-8 backdrop-blur transition-all hover:shadow-lg"
+                  className="rounded-2xl border bg-white/50 p-6 sm:p-8 backdrop-blur transition-all hover:shadow-lg"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="rounded-full bg-gray-100 p-3">
-                      <method.icon className="h-6 w-6 text-gray-600" />
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <div className="rounded-full bg-gray-100 p-2 sm:p-3 shrink-0">
+                      <method.icon className="h-5 w-5 sm:h-6 sm:w-6 text-gray-600" />
                     </div>
-                    <div>
-                      <h2 className="font-semibold text-gray-900">{method.title}</h2>
+                    <div className="min-w-0">
+                      <h2 className="font-semibold text-gray-900 text-sm sm:text-base">{method.title}</h2>
                       {method.href ? (
                         <a
                           href={method.href}
-                          className="text-lg font-medium text-blue-600 hover:text-blue-500"
+                          className="text-base sm:text-lg font-medium text-blue-600 hover:text-blue-500 break-all"
                         >
                           {method.value}
                         </a>
                       ) : (
-                        <p className="text-lg font-medium text-gray-900">{method.value}</p>
+                        <p className="text-base sm:text-lg font-medium text-gray-900">{method.value}</p>
                       )}
                     </div>
                   </div>
-                  <p className="mt-3 text-gray-600">{method.description}</p>
+                  <p className="mt-3 text-sm sm:text-base text-gray-600">{method.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Services Overview */}
-          <div className="mx-auto max-w-3xl mt-16">
-            <div className="rounded-2xl bg-gray-50/50 p-8 backdrop-blur">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          <div className="mx-auto max-w-3xl mt-12 sm:mt-16">
+            <div className="rounded-2xl bg-gray-50/50 p-6 sm:p-8 backdrop-blur">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">
                 Our Services
               </h2>
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
                 {services.map((service) => (
                   <div
                     key={service}
-                    className="flex items-center gap-2 text-gray-600"
+                    className="flex items-center gap-2 text-gray-600 text-sm sm:text-base"
                   >
-                    <ArrowRight className="h-4 w-4 text-gray-400" />
+                    <ArrowRight className="h-4 w-4 text-gray-400 shrink-0" />
                     <span>{service}</span>
                   </div>
                 ))}
@@ -112,16 +112,16 @@ export function Contact() {
           </div>
 
           {/* Additional Info */}
-          <div className="mx-auto max-w-3xl mt-16 text-center">
-            <div className="rounded-2xl border bg-white/50 p-8 backdrop-blur">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="mx-auto max-w-3xl mt-12 sm:mt-16 text-center">
+            <div className="rounded-2xl border bg-white/50 p-6 sm:p-8 backdrop-blur">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Professional & Fully Insured
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
                 Wright Angle Carpentry is a family business established in 2009. We are fully qualified, 
                 insured, and take pride in delivering high-quality craftsmanship for every project.
               </p>
-              <Button size="lg" className="gap-2">
+              <Button size="lg" className="gap-2 w-full sm:w-auto">
                 View Our Previous Work
                 <ArrowRight className="h-4 w-4" />
               </Button>

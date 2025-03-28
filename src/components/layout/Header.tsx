@@ -81,28 +81,28 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col space-y-4">
+              <nav className="flex flex-col space-y-4 px-6">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-lg font-medium text-gray-600 hover:text-gray-900"
+                    className="text-lg font-medium text-gray-600 hover:text-gray-900 py-2"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
                   </Link>
                 ))}
-                <div className="mt-6 space-y-4 border-t pt-4">
+                <div className="mt-6 space-y-4 border-t pt-6">
                   <a
                     href="tel:07753958395"
-                    className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900"
+                    className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 py-2"
                   >
                     <Phone className="h-4 w-4" />
                     <span>07753958395</span>
                   </a>
                   <a
                     href="mailto:james@wrightanglecarpentry.co.uk"
-                    className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900"
+                    className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 py-2"
                   >
                     <Mail className="h-4 w-4" />
                     <span>james@wrightanglecarpentry.co.uk</span>
