@@ -15,6 +15,19 @@ const navigation = [
   { name: "Contact Us", href: "/contact" },
 ];
 
+const contactInfo = [
+  {
+    icon: Phone,
+    value: "07753958395",
+    href: "tel:07753958395",
+  },
+  {
+    icon: Mail,
+    value: "james@wrightanglecarpentry.co.uk",
+    href: "mailto:james@wrightanglecarpentry.co.uk",
+  },
+];
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -99,26 +112,22 @@ export function Header() {
                     {item.name}
                   </Link>
                 ))}
-                <div className="mt-4 space-y-1 border-t px-6 py-4 bg-gray-50">
+                <div className="mt-4 border-t px-6 py-4 bg-gray-50">
                   <h3 className="text-sm font-medium text-gray-500 mb-3">Contact Us</h3>
-                  <a
-                    href="tel:07753958395"
-                    className="flex items-center gap-3 py-2.5 text-sm text-gray-600 hover:text-gray-900 rounded-md hover:bg-gray-100 px-3 transition-colors"
-                  >
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100">
-                      <Phone className="h-4 w-4 text-gray-600" />
-                    </div>
-                    <span>07753958395</span>
-                  </a>
-                  <a
-                    href="mailto:james@wrightanglecarpentry.co.uk"
-                    className="flex items-center gap-3 py-2.5 text-sm text-gray-600 hover:text-gray-900 rounded-md hover:bg-gray-100 px-3 transition-colors"
-                  >
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100">
-                      <Mail className="h-4 w-4 text-gray-600" />
-                    </div>
-                    <span>james@wrightanglecarpentry.co.uk</span>
-                  </a>
+                  <div className="space-y-2">
+                    {contactInfo.map((item) => (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        className="flex items-start gap-3 p-3 text-sm text-gray-600 hover:text-gray-900 rounded-md hover:bg-gray-100 transition-colors"
+                      >
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-100">
+                          <item.icon className="h-4 w-4 text-gray-600" />
+                        </div>
+                        <span className="break-all pt-1.5">{item.value}</span>
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </nav>
             </SheetContent>
