@@ -113,10 +113,10 @@ export function PreviousWork() {
           {/* Call to Action */}
           <div className="mx-auto max-w-3xl mt-16 text-center">
             <Button size="lg" className="gap-2" asChild>
-              <a href="/contact" className="flex items-center gap-2">
+              <Link href="/contact" className="flex items-center gap-2">
                 Get Free Estimate
                 <ArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
             </Button>
           </div>
         </div>

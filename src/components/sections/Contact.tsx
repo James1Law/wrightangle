@@ -120,9 +120,11 @@ export function Contact() {
                 Wright Angle Carpentry is a family business established in 2009. We are fully qualified, 
                 insured, and take pride in delivering high-quality craftsmanship for every project.
               </p>
-              <Button size="lg" className="gap-2 w-full sm:w-auto">
-                View Our Previous Work
-                <ArrowRight className="h-4 w-4" />
+              <Button size="lg" className="gap-2 w-full sm:w-auto" asChild>
+                <Link href="/work">
+                  View Our Previous Work
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </Button>
             </div>
           </div>

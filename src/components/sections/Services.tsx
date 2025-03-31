@@ -76,9 +76,11 @@ export function Services() {
                     <p className="flex-1 text-gray-600 mb-6">
                       {service.description}
                     </p>
-                    <Button variant="outline" className="w-full gap-2">
-                      Learn More
-                      <ArrowRight className="h-4 w-4" />
+                    <Button variant="outline" className="w-full gap-2" asChild>
+                      <Link href={service.link}>
+                        Learn More
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
                     </Button>
                   </div>
                 </div>
@@ -96,10 +98,10 @@ export function Services() {
                 We work with a qualified team of trades including electricians and plumbers to provide the complete building package for your project. All our work is completed to the highest standards, with attention to detail and customer satisfaction as our priorities.
               </p>
               <Button variant="outline" className="w-full gap-2" asChild>
-                <a href="/contact" className="flex items-center gap-2">
+                <Link href="/contact" className="flex items-center gap-2">
                   Get Free Estimate
                   <ArrowRight className="h-4 w-4" />
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
