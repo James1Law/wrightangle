@@ -112,19 +112,19 @@ export function Header() {
                     {item.name}
                   </Link>
                 ))}
-                <div className="mt-4 border-t px-6 py-4 bg-gray-50">
-                  <h3 className="text-sm font-medium text-gray-500 mb-3">Contact Us</h3>
+                <div className="mt-4 border-t px-2 py-4 bg-gray-50">
+                  <h3 className="text-sm font-medium text-gray-500 mb-3 px-4">Contact Us</h3>
                   <div className="space-y-2">
                     {contactInfo.map((item) => (
                       <a
                         key={item.href}
                         href={item.href}
-                        className="flex items-start gap-3 p-3 text-sm text-gray-600 hover:text-gray-900 rounded-md hover:bg-gray-100 transition-colors"
+                        className="flex items-center gap-3 p-2 text-sm text-gray-600 hover:text-gray-900 rounded-md hover:bg-gray-100 transition-colors"
                       >
                         <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-100">
                           <item.icon className="h-4 w-4 text-gray-600" />
                         </div>
-                        <span className="break-all pt-1.5">{item.value}</span>
+                        <span className="whitespace-nowrap">{item.value}</span>
                       </a>
                     ))}
                   </div>
