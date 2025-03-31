@@ -28,7 +28,7 @@ const services = [
     title: "Interior Carpentry",
     description: "From custom bookcases and shelving to doors and trim work, our interior carpentry services combine functionality with beautiful craftsmanship. We specialise in creating bespoke interior solutions that perfectly match your space and style.",
     link: "/services/interior-carpentry",
-    image: "/images/interior-carpentry.webp"
+    image: "/images/custom-bookcase.webp"
   },
   {
     title: "Exterior Carpentry",
