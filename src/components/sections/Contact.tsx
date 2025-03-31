@@ -1,8 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
-import { Background } from "@/components/ui/background";
+import { ArrowRight, Phone, Mail, MapPin, Clock } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const contactMethods = [
   {
@@ -45,8 +46,6 @@ const services = [
 export function Contact() {
   return (
     <div className="relative overflow-hidden bg-white">
-      <Background />
-      
       <div className="relative">
         <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
           {/* Header */}

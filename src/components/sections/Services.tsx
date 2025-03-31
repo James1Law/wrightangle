@@ -2,8 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Background } from "@/components/ui/background";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
@@ -41,8 +41,6 @@ const services = [
 export function Services() {
   return (
     <div className="relative overflow-hidden bg-white">
-      <Background />
-      
       <div className="relative">
         <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
           {/* Header */}
