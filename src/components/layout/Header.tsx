@@ -32,9 +32,9 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-[#f9f9f8] shadow-sm">
       {/* Top bar with contact info */}
-      <div className="hidden bg-white md:block">
+      <div className="hidden bg-[#f9f9f8] md:block">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-end space-x-6 py-2">
             <a
