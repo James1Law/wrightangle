@@ -62,8 +62,8 @@ export function About() {
               <div className="sticky top-8">
                 <div className="relative h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/hero2.webp"
-                    alt="Wright Angle Carpentry workshop"
+                    src="/images/about-us.webp"
+                    alt="Wright Angle Carpentry craftsmanship showcase"
                     fill
                     className="object-cover"
                     priority
@@ -105,8 +105,8 @@ export function About() {
           <div className="mt-12 lg:hidden">
             <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/hero2.webp"
-                alt="Wright Angle Carpentry workshop"
+                src="/images/about-us.webp"
+                alt="Wright Angle Carpentry craftsmanship showcase"
                 fill
                 className="object-cover"
                 priority
