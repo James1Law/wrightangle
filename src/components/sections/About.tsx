@@ -20,9 +20,7 @@ export function About() {
                   Crafting Your <span className="text-primary">Vision</span> Into Reality
                 </h1>
                 <p className="text-xl leading-8 text-gray-600">
-                  Wright Angle is a family business set up in 2009. Based in Wareham, Dorset, it is run by James Wright, 
-                  a City & Guilds qualified carpenter with over 20 years experience. His work includes hand-built kitchens 
-                  to renovations projects abroad.
+                  Established in 2009, Wright Angle Carpentry is a family-run business founded by James Wright, a City & Guilds qualified craftsman with over two decades of experience. Based in the heart of Wareham, Dorset, we&apos;ve built our reputation on exceptional workmanship, from bespoke hand-crafted kitchens to comprehensive renovation projects both locally and internationally.
                 </p>
               </div>
 
