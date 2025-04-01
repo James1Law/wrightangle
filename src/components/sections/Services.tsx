@@ -40,10 +40,10 @@ export function Services() {
         <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              Our Services
+            <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Our <span className="text-primary">Services</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-xl leading-8 text-gray-600">
               From bespoke fitted furniture to complete property refurbishments, we offer a comprehensive range of carpentry and building services.
             </p>
           </div>
@@ -64,11 +64,11 @@ export function Services() {
                       className="object-cover transition-transform group-hover:scale-105"
                     />
                   </div>
-                  <div className="flex flex-1 flex-col p-6">
+                  <div className="flex flex-1 flex-col p-6 sm:p-8">
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
                       {service.title}
                     </h2>
-                    <p className="text-gray-600">
+                    <p className="text-base sm:text-lg text-gray-600">
                       {service.description}
                     </p>
                   </div>
@@ -79,20 +79,25 @@ export function Services() {
 
           {/* Additional Info */}
           <div className="mx-auto max-w-3xl mt-16">
-            <div className="rounded-2xl bg-gray-50/50 p-8 backdrop-blur text-center">
+            <div className="rounded-2xl bg-gray-50/50 p-6 sm:p-8 backdrop-blur text-center">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Complete Building Package
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg leading-8 text-gray-600 mb-6">
                 We work with a qualified team of trades including electricians and plumbers to provide the complete building package for your project. All our work is completed to the highest standards, with attention to detail and customer satisfaction as our priorities.
               </p>
-              <Button variant="outline" className="w-full gap-2" asChild>
+              <Button size="lg" className="gap-2 w-full sm:w-auto" asChild>
                 <Link href="/contact" className="flex items-center gap-2">
                   Get Free Estimate
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
             </div>
+          </div>
+
+          {/* Woodgrain Footer */}
+          <div className="mt-16 -mx-4 sm:-mx-6 lg:-mx-8">
+            <div className="h-16 bg-[url('/images/woodgrain-pattern.png')] bg-repeat-x opacity-10" />
           </div>
         </div>
       </div>
