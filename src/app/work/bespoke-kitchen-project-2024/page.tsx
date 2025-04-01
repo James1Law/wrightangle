@@ -12,9 +12,9 @@ export default function KitchenProjectPage() {
     date: "May 2024",
     location: "Wareham, Dorset",
     duration: "4 weeks",
-    description: `This stunning bespoke kitchen project showcases our commitment to exceptional craftsmanship and attention to detail. Working closely with our clients, we designed and installed a fully customized kitchen that perfectly balances functionality with contemporary aesthetics.
+    description: `This exquisite bespoke kitchen project exemplifies our dedication to exceptional craftsmanship and meticulous attention to detail. Working in close partnership with our clients, we designed and fitted a fully bespoke kitchen that harmoniously balances practicality with contemporary aesthetics.
 
-    The project features handcrafted cabinetry, premium quartz worktops, and integrated appliances, creating a seamless and sophisticated cooking space. Every element was carefully considered, from the ergonomic layout to the custom storage solutions, ensuring the kitchen not only looks beautiful but works efficiently for everyday use.`,
+    The project showcases handcrafted cabinetry, premium quartz worktops, and integrated appliances, creating an elegant and refined cooking space. Each element was thoughtfully considered, from the ergonomic layout to the tailored storage solutions, ensuring the kitchen is not only aesthetically pleasing but functions brilliantly for day-to-day family life.`,
     images: [
       {
         src: "/images/previous-work-kitchen1.jpg",
@@ -31,6 +31,10 @@ export default function KitchenProjectPage() {
       {
         src: "/images/previous-work-kitchen4.jpg",
         alt: "Integrated appliances and storage solutions",
+      },
+      {
+        src: "/images/previous-work-kitchen5.jpg",
+        alt: "Full view of the completed bespoke kitchen installation",
       },
     ],
     features: [
