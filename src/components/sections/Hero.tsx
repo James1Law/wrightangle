@@ -6,12 +6,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const specialties = [
-  "Kitchens",
-  "Fitted Furniture",
-  "Decking",
-  "Conversions",
-  "Refurbishments",
-  "Property Improvements",
+  "Bespoke Kitchens",
+  "Custom Furniture",
+  "Premium Decking",
+  "Home Conversions",
+  "Full Refurbishments",
+  "Property Enhancement",
 ];
 
 export function Hero() {
@@ -23,11 +23,11 @@ export function Hero() {
             {/* Text Content */}
             <div className="text-left space-y-8">
               <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Expert Carpentry & <span className="text-primary">Building Services</span>
+                Crafting Excellence in <span className="text-primary">Carpentry & Building</span>
               </h1>
               <p className="text-xl leading-8 text-gray-600">
-                An established, experienced company offering a wide range of building services at a personal level.
-                From storage solutions to refurbishments and extensions, we take pride in each job we do.
+                Since 2009, Wright Angle Carpentry has delivered exceptional craftsmanship across Dorset and Hampshire. 
+                From bespoke storage solutions to complete home transformations, we bring expertise, dedication, and attention to detail to every project.
               </p>
 
               <div className="flex flex-col gap-4 sm:flex-row">
@@ -65,7 +65,7 @@ export function Hero() {
                     <h3 className="font-semibold text-gray-900">Area Coverage</h3>
                   </div>
                   <p className="mt-4 text-sm text-gray-600">
-                    We cover Wareham, Poole, Bournemouth, Christchurch, Dorset and Hampshire. All travel costs included with no hidden extras.
+                    Serving Wareham, Poole, Bournemouth, Christchurch, and surrounding areas in Dorset and Hampshire. Travel costs included for transparency and convenience.
                   </p>
                 </div>
 
@@ -78,7 +78,7 @@ export function Hero() {
                     <h3 className="font-semibold text-gray-900">Fully Insured</h3>
                   </div>
                   <p className="mt-4 text-sm text-gray-600">
-                    Specialists in what we do, qualified and fully insured giving you peace of mind.
+                    City & Guilds qualified craftsmen with comprehensive insurance coverage, ensuring your project is in safe, skilled hands.
                   </p>
                 </div>
               </div>
@@ -107,13 +107,13 @@ export function Hero() {
                 <div className="rounded-full bg-primary/10 p-3">
                   <Wrench className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-gray-900">Our Specialties</h3>
+                <h3 className="font-semibold text-gray-900">Expertise & Services</h3>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {specialties.map((specialty) => (
                   <span
                     key={specialty}
-                    className="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                    className="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
                   >
                     {specialty}
                   </span>
