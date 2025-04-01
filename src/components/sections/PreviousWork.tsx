@@ -94,6 +94,7 @@ export function PreviousWork() {
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover transition-transform group-hover:scale-105"
+                        priority={category.isLatest}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/25 p-6 flex flex-col justify-end">
                         <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">

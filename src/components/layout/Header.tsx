@@ -61,6 +61,7 @@ export function Header() {
                   src="/wrightlogo.png"
                   alt="Wright Angle Carpentry"
                   fill
+                  sizes="(max-width: 640px) 8rem, 9rem"
                   className="object-contain"
                   priority
                 />
