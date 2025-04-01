@@ -75,14 +75,14 @@ export function PreviousWork() {
                         fill
                         className="object-cover transition-transform group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 p-6 flex flex-col justify-end">
-                        <h3 className="text-xl font-bold text-white mb-2">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/25 p-6 flex flex-col justify-end backdrop-blur-[2px]">
+                        <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">
                           {category.title}
                         </h3>
-                        <p className="text-sm text-gray-200">
+                        <p className="text-base text-white font-medium drop-shadow-lg">
                           {category.description}
                         </p>
-                        <span className="text-sm text-primary-100 mt-2 flex items-center gap-1">
+                        <span className="text-sm font-medium text-primary-100 mt-3 flex items-center gap-1 drop-shadow">
                           View Project <ArrowRight className="h-4 w-4" />
                         </span>
                       </div>
@@ -95,11 +95,11 @@ export function PreviousWork() {
                         fill
                         className="object-cover transition-transform group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 p-6 flex flex-col justify-end">
-                        <h3 className="text-xl font-bold text-white mb-2">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/25 p-6 flex flex-col justify-end backdrop-blur-[2px]">
+                        <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">
                           {category.title}
                         </h3>
-                        <p className="text-sm text-gray-200">
+                        <p className="text-base text-white font-medium drop-shadow-lg">
                           {category.description}
                         </p>
                       </div>
