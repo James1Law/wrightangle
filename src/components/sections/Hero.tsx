@@ -10,7 +10,8 @@ const specialties = [
   "Fitted Furniture",
   "Decking",
   "Conversions",
-  "Property refurbishments and improvements",
+  "Refurbishments",
+  "Property Improvements",
 ];
 
 export function Hero() {
@@ -108,11 +109,11 @@ export function Hero() {
                 </div>
                 <h3 className="font-semibold text-gray-900">Our Specialties</h3>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {specialties.map((specialty) => (
                   <span
                     key={specialty}
-                    className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                    className="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                   >
                     {specialty}
                   </span>
