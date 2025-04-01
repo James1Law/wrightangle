@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { ArrowRight, Phone, Mail, MapPin, Clock, Facebook } from "lucide-react";
 import Link from "next/link";
 
 const contactMethods = [
@@ -18,6 +18,13 @@ const contactMethods = [
     value: "james@wrightanglecarpentry.co.uk",
     description: "Share your project vision and requirements for a comprehensive response",
     href: "mailto:james@wrightanglecarpentry.co.uk",
+  },
+  {
+    icon: Facebook,
+    title: "Facebook",
+    value: "Wright Angle Carpentry",
+    description: "Follow us on Facebook for project updates, tips, and inspiration",
+    href: "https://www.facebook.com/p/Wright-Angle-Carpentry-100068082019115/",
   },
   {
     icon: MapPin,
