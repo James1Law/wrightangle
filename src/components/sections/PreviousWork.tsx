@@ -7,7 +7,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const projectCategories = [
+interface ProjectCategory {
+  title: string;
+  description: string;
+  image: string;
+  href: string;
+  isLatest: boolean;
+}
+
+const projectCategories: ProjectCategory[] = [
   {
     title: "Latest Project: Bespoke Kitchen",
     description: "Explore our latest bespoke kitchen installation featuring handcrafted cabinetry and premium finishes.",
@@ -19,19 +27,22 @@ const projectCategories = [
     title: "Conversions",
     description: "Complete property transformations, from loft conversions to garage conversions, maximising your living space.",
     image: "/images/conversions.webp",
-    isLatest: false
+    isLatest: false,
+    href: "#"
   },
   {
     title: "Fitted Wardrobes",
     description: "Custom-designed storage solutions to maximise your space while maintaining aesthetic appeal.",
     image: "/images/fitted-furniture.webp",
-    isLatest: false
+    isLatest: false,
+    href: "#"
   },
   {
     title: "Decking",
     description: "Beautiful outdoor living spaces created with high-quality materials and expert craftsmanship.",
     image: "/images/decking.webp",
-    isLatest: false
+    isLatest: false,
+    href: "#"
   }
 ];
 
