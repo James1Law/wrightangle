@@ -64,7 +64,7 @@ export function Hero() {
                     <h3 className="font-semibold text-gray-900">Area Coverage</h3>
                   </div>
                   <p className="mt-4 text-sm text-gray-600">
-                    We cover Sussex, Kent and London. All travel costs included with no hidden extras.
+                    We cover Wareham, Poole, Bournemouth, Christchurch, Dorset and Hampshire. All travel costs included with no hidden extras.
                   </p>
                 </div>
 
