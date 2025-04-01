@@ -42,6 +42,7 @@ export function ImageViewer({ src, alt, onClose }: ImageViewerProps) {
             src={src}
             alt={alt}
             fill
+            sizes="100vw"
             className="object-contain"
             onClick={(e) => e.stopPropagation()}
             priority
