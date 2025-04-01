@@ -1,0 +1,112 @@
+import { CalendarDays, Clock, MapPin } from "lucide-react";
+import Image from "next/image";
+
+interface ProjectPostProps {
+  title: string;
+  date: string;
+  location: string;
+  duration: string;
+  description: string;
+  images: {
+    src: string;
+    alt: string;
+  }[];
+  features: string[];
+}
+
+export function ProjectPost({
+  title,
+  date,
+  location,
+  duration,
+  description,
+  images,
+  features,
+}: ProjectPostProps) {
+  return (
+    <article className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl text-center mb-12">
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-4">
+          {title}
+        </h1>
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+          <div className="flex items-center gap-1.5">
+            <CalendarDays className="h-4 w-4" />
+            <span>{date}</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <MapPin className="h-4 w-4" />
+            <span>{location}</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <Clock className="h-4 w-4" />
+            <span>{duration}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Image */}
+      <div className="aspect-[16/9] relative rounded-2xl overflow-hidden mb-12 shadow-2xl">
+        <Image
+          src={images[0].src}
+          alt={images[0].alt}
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
+      {/* Project Description */}
+      <div className="prose prose-lg mx-auto mb-12">
+        <p className="lead">{description}</p>
+      </div>
+
+      {/* Features Grid */}
+      <div className="mx-auto max-w-3xl mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          Project Features
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {features.map((feature) => (
+            <div
+              key={feature}
+              className="flex items-center gap-3 p-4 rounded-lg border bg-white/50 backdrop-blur"
+            >
+              <svg
+                className="h-5 w-5 text-primary shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span className="text-gray-700">{feature}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Image Gallery */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {images.slice(1).map((image, index) => (
+          <div
+            key={index}
+            className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg"
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover transition-transform hover:scale-105"
+            />
+          </div>
+        ))}
+      </div>
+    </article>
+  );
+} 

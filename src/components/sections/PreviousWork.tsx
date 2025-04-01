@@ -7,6 +7,12 @@ import Link from "next/link";
 
 const projectCategories = [
   {
+    title: "Latest Project: Bespoke Kitchen",
+    description: "Explore our latest bespoke kitchen installation featuring handcrafted cabinetry and premium finishes.",
+    image: "/images/previous-work-kitchen1.jpg",
+    href: "/work/bespoke-kitchen-project-2024"
+  },
+  {
     title: "Conversions",
     description: "Complete property transformations, from loft conversions to garage conversions, maximising your living space.",
     image: "/images/conversions.webp"
@@ -61,20 +67,44 @@ export function PreviousWork() {
                   key={category.title}
                   className="group relative aspect-[4/3] overflow-hidden rounded-2xl"
                 >
-                  <Image
-                    src={category.image}
-                    alt={category.title}
-                    fill
-                    className="object-cover transition-transform group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 p-6 flex flex-col justify-end">
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      {category.title}
-                    </h3>
-                    <p className="text-sm text-gray-200">
-                      {category.description}
-                    </p>
-                  </div>
+                  {category.href ? (
+                    <Link href={category.href} className="block h-full">
+                      <Image
+                        src={category.image}
+                        alt={category.title}
+                        fill
+                        className="object-cover transition-transform group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 p-6 flex flex-col justify-end">
+                        <h3 className="text-xl font-bold text-white mb-2">
+                          {category.title}
+                        </h3>
+                        <p className="text-sm text-gray-200">
+                          {category.description}
+                        </p>
+                        <span className="text-sm text-primary-100 mt-2 flex items-center gap-1">
+                          View Project <ArrowRight className="h-4 w-4" />
+                        </span>
+                      </div>
+                    </Link>
+                  ) : (
+                    <>
+                      <Image
+                        src={category.image}
+                        alt={category.title}
+                        fill
+                        className="object-cover transition-transform group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 p-6 flex flex-col justify-end">
+                        <h3 className="text-xl font-bold text-white mb-2">
+                          {category.title}
+                        </h3>
+                        <p className="text-sm text-gray-200">
+                          {category.description}
+                        </p>
+                      </div>
+                    </>
+                  )}
                 </div>
               ))}
             </div>
