@@ -9,31 +9,26 @@ const services = [
   {
     title: "Fitted furniture",
     description: "We take great pride in the projects we undertake. With interior carpentry there is a higher requirement for attention to detail and precision. Our fitted furniture solutions are custom-designed to maximise your space while maintaining aesthetic appeal.",
-    link: "/services/fitted-furniture",
     image: "/images/fitted-furniture.webp"
   },
   {
     title: "Refurbishment",
     description: "If you need to update your property, need a new kitchen, bathroom or house decorated, we offer the complete refurbishment service. We handle everything from initial design to final implementation, ensuring a seamless renovation process.",
-    link: "/services/refurbishment",
     image: "/images/refurbishment.webp"
   },
   {
     title: "Maintenance",
     description: "We are at hand to react quickly to necessary repairs to properties. We can liaise and coordinate with other trades to ensure your maintenance needs are met efficiently and effectively.",
-    link: "/services/maintenance",
     image: "/images/maintenance.webp"
   },
   {
     title: "Interior Carpentry",
     description: "From custom bookcases and shelving to doors and trim work, our interior carpentry services combine functionality with beautiful craftsmanship. We specialise in creating bespoke interior solutions that perfectly match your space and style.",
-    link: "/services/interior-carpentry",
     image: "/images/custom-bookcase.webp"
   },
   {
     title: "Exterior Carpentry",
     description: "Our exterior carpentry services include decking, fencing, and outdoor structures. We use materials and techniques specifically chosen to withstand the elements while maintaining their aesthetic appeal.",
-    link: "/services/exterior-carpentry",
     image: "/images/exterior-carpentry.webp"
   }
 ];
@@ -73,15 +68,9 @@ export function Services() {
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
                       {service.title}
                     </h2>
-                    <p className="flex-1 text-gray-600 mb-6">
+                    <p className="text-gray-600">
                       {service.description}
                     </p>
-                    <Button variant="outline" className="w-full gap-2" asChild>
-                      <Link href={service.link}>
-                        Learn More
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </Button>
                   </div>
                 </div>
               ))}
