@@ -22,6 +22,10 @@ export function ImageViewer({ src, alt, onClose }: ImageViewerProps) {
     <div 
       className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image viewer"
+      aria-describedby="image-viewer-desc"
     >
       <button
         onClick={onClose}
@@ -34,6 +38,7 @@ export function ImageViewer({ src, alt, onClose }: ImageViewerProps) {
       <div className="absolute inset-6 md:inset-12">
         <div className="relative w-full h-full">
           <Image
+            id="image-viewer-desc"
             src={src}
             alt={alt}
             fill
