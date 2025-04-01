@@ -60,7 +60,7 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-4">
-              <div className="relative h-20 w-20 sm:h-24 sm:w-24">
+              <div className="relative h-24 w-24 sm:h-32 sm:w-32">
                 <Image
                   src="/wrightlogo.png"
                   alt="Wright Angle Carpentry"
