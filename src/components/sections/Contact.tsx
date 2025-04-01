@@ -22,8 +22,8 @@ const contactMethods = [
   {
     icon: MapPin,
     title: "Service Areas",
-    value: "Sussex, Kent and London",
-    description: "We cover all travel costs with no hidden extras",
+    value: "Wareham, Poole, Bournemouth, Christchurch",
+    description: "We cover Dorset and Hampshire. All travel costs included with no hidden extras",
   },
   {
     icon: Clock,
@@ -34,12 +34,11 @@ const contactMethods = [
 ];
 
 const services = [
-  "Bespoke Kitchens",
+  "Kitchens",
   "Fitted Furniture",
-  "Property Renovations",
-  "Interior Carpentry",
-  "Exterior Work",
-  "Maintenance",
+  "Decking",
+  "Conversions",
+  "Property refurbishments and improvements",
 ];
 
 export function Contact() {
