@@ -37,20 +37,16 @@ export function Header() {
       <div className="hidden bg-[#f9f9f8] md:block">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-end space-x-6 py-2">
-            <a
-              href="tel:07753958395"
-              className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900"
-            >
-              <Phone className="h-4 w-4" />
-              <span>07753958395</span>
-            </a>
-            <a
-              href="mailto:james@wrightanglecarpentry.co.uk"
-              className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900"
-            >
-              <Mail className="h-4 w-4" />
-              <span>james@wrightanglecarpentry.co.uk</span>
-            </a>
+            {contactInfo.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900"
+              >
+                <item.icon className="h-4 w-4" />
+                <span>{item.value}</span>
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -60,7 +56,7 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-4">
-              <div className="relative h-24 w-24 sm:h-32 sm:w-32">
+              <div className="relative h-28 w-28 sm:h-32 sm:w-32">
                 <Image
                   src="/wrightlogo.png"
                   alt="Wright Angle Carpentry"
@@ -70,7 +66,9 @@ export function Header() {
                 />
               </div>
               <div className="hidden md:block">
-                <p className="text-sm text-gray-600">Bespoke joinery, traditional renovation and expert maintenance</p>
+                <p className="text-sm text-gray-600">
+                  Bespoke joinery, traditional renovation and expert maintenance
+                </p>
               </div>
             </Link>
           </div>
