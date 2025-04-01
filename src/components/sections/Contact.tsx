@@ -9,27 +9,27 @@ const contactMethods = [
     icon: Phone,
     title: "Phone",
     value: "07753958395",
-    description: "Available for free estimates and consultations",
+    description: "Reach us directly for personalised consultations and detailed estimates",
     href: "tel:07753958395",
   },
   {
     icon: Mail,
     title: "Email",
     value: "james@wrightanglecarpentry.co.uk",
-    description: "Send us your project details and requirements",
+    description: "Share your project vision and requirements for a comprehensive response",
     href: "mailto:james@wrightanglecarpentry.co.uk",
   },
   {
     icon: MapPin,
     title: "Service Areas",
     value: "Wareham, Poole, Bournemouth, Christchurch",
-    description: "We cover Dorset and Hampshire. All travel costs included with no hidden extras",
+    description: "Serving Dorset and Hampshire with inclusive travel costs - no hidden extras",
   },
   {
     icon: Clock,
     title: "Response Time",
     value: "Within 24 hours",
-    description: "Quick response for all enquiries and estimates",
+    description: "Swift, professional responses to all enquiries ensuring your project moves forward promptly",
   },
 ];
 
@@ -48,11 +48,11 @@ export function Contact() {
         <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Contact Us
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Get in touch for a free estimate or to discuss your carpentry and building needs. We&apos;re here to help turn your ideas into reality.
+            <p className="mt-6 text-xl leading-8 text-gray-600">
+              Begin your journey with Wright Angle Carpentry. Whether you&apos;re planning a renovation, need bespoke furniture, or seeking expert craftsmanship, we&apos;re here to bring your vision to life.
             </p>
           </div>
 
@@ -112,15 +112,14 @@ export function Contact() {
           <div className="mx-auto max-w-3xl mt-12 sm:mt-16 text-center">
             <div className="rounded-2xl border bg-white/50 p-6 sm:p-8 backdrop-blur">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
-                Professional & Fully Insured
+                Professional Excellence Assured
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-                Wright Angle Carpentry is a family business established in 2009. We are fully qualified, 
-                insured, and take pride in delivering high-quality craftsmanship for every project.
+                As an established family business since 2009, Wright Angle Carpentry combines traditional craftsmanship with modern expertise. Fully qualified and comprehensively insured, we deliver exceptional quality across every project we undertake.
               </p>
               <Button size="lg" className="gap-2 w-full sm:w-auto" asChild>
                 <Link href="/work">
-                  View Our Previous Work
+                  Explore Our Portfolio
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>

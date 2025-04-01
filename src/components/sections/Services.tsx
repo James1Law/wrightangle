@@ -7,28 +7,28 @@ import Link from "next/link";
 
 const services = [
   {
-    title: "Fitted furniture",
-    description: "We take great pride in the projects we undertake. With interior carpentry there is a higher requirement for attention to detail and precision. Our fitted furniture solutions are custom-designed to maximise your space while maintaining aesthetic appeal.",
+    title: "Fitted Furniture",
+    description: "Our bespoke fitted furniture solutions exemplify precision craftsmanship and meticulous attention to detail. We create custom-designed pieces that maximise your space whilst seamlessly integrating with your home&apos;s aesthetic, delivering both functionality and elegance.",
     image: "/images/fitted-furniture.webp"
   },
   {
     title: "Refurbishment",
-    description: "If you need to update your property, need a new kitchen, bathroom or house decorated, we offer the complete refurbishment service. We handle everything from initial design to final implementation, ensuring a seamless renovation process.",
+    description: "Transform your property with our comprehensive refurbishment service. From kitchen and bathroom renovations to complete house transformations, we manage every aspect from initial design through to flawless implementation, ensuring a seamless and stress-free experience.",
     image: "/images/refurbishment.webp"
   },
   {
     title: "Maintenance",
-    description: "We are at hand to react quickly to necessary repairs to properties. We can liaise and coordinate with other trades to ensure your maintenance needs are met efficiently and effectively.",
+    description: "Our responsive maintenance service ensures your property is kept in pristine condition. Working alongside trusted trade partners, we provide swift, efficient solutions to all your property maintenance needs, delivering lasting quality with every repair.",
     image: "/images/maintenance.webp"
   },
   {
     title: "Interior Carpentry",
-    description: "From custom bookcases and shelving to doors and trim work, our interior carpentry services combine functionality with beautiful craftsmanship. We specialise in creating bespoke interior solutions that perfectly match your space and style.",
+    description: "Elevate your living space with our exceptional interior carpentry services. From elegant bookcases and shelving to doors and architectural trim work, we craft bespoke solutions that harmoniously blend functionality with sophisticated design, perfectly complementing your home&apos;s character.",
     image: "/images/custom-bookcase.webp"
   },
   {
     title: "Exterior Carpentry",
-    description: "Our exterior carpentry services include decking, fencing, and outdoor structures. We use materials and techniques specifically chosen to withstand the elements while maintaining their aesthetic appeal.",
+    description: "Enhance your outdoor living space with our expertly crafted exterior carpentry. Specialising in durable decking, fencing, and outdoor structures, we utilise premium materials and time-tested techniques to create beautiful, weather-resistant installations that stand the test of time.",
     image: "/images/exterior-carpentry.webp"
   }
 ];
@@ -44,7 +44,7 @@ export function Services() {
               Our <span className="text-primary">Services</span>
             </h1>
             <p className="mt-6 text-xl leading-8 text-gray-600">
-              From bespoke fitted furniture to complete property refurbishments, we offer a comprehensive range of carpentry and building services.
+              Discover our comprehensive range of bespoke carpentry and building services, where craftsmanship meets innovation to transform your vision into reality.
             </p>
           </div>
 
@@ -84,7 +84,7 @@ export function Services() {
                 Complete Building Package
               </h2>
               <p className="text-lg leading-8 text-gray-600 mb-6">
-                We work with a qualified team of trades including electricians and plumbers to provide the complete building package for your project. All our work is completed to the highest standards, with attention to detail and customer satisfaction as our priorities.
+                Experience a truly integrated approach to your project with our complete building package. We collaborate with a carefully selected network of qualified specialists, including electricians and plumbers, ensuring exceptional quality across every aspect of your project. Our unwavering commitment to craftsmanship and attention to detail guarantees results that exceed expectations.
               </p>
               <Button size="lg" className="gap-2 w-full sm:w-auto" asChild>
                 <Link href="/contact" className="flex items-center gap-2">
