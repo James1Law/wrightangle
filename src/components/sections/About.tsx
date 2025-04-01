@@ -20,8 +20,8 @@ export function About() {
                   Crafting Your <span className="text-primary">Vision</span> Into Reality
                 </h1>
                 <p className="text-xl leading-8 text-gray-600">
-                  Wright Angle is a family business set up in 2009. Based in Eastbourne, it is run by James Wright, 
-                  a City & Guilds qualified carpenter with 14 years experience. His work includes hand-built kitchens 
+                  Wright Angle is a family business set up in 2009. Based in Wareham, Dorset, it is run by James Wright, 
+                  a City & Guilds qualified carpenter with over 20 years experience. His work includes hand-built kitchens 
                   to renovations projects abroad.
                 </p>
               </div>
