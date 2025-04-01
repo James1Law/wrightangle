@@ -1,5 +1,10 @@
-import { CalendarDays, Clock, MapPin } from "lucide-react";
+"use client";
+
+import { CalendarDays, Clock, MapPin, ArrowLeft } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { ImageViewer } from "@/components/ui/ImageViewer";
 
 interface ProjectPostProps {
   title: string;
@@ -23,8 +28,19 @@ export function ProjectPost({
   images,
   features,
 }: ProjectPostProps) {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
   return (
     <article className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+      {/* Back Button */}
+      <Link
+        href="/work"
+        className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors mb-12"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        <span>Back to Previous Work</span>
+      </Link>
+
       <div className="mx-auto max-w-3xl text-center mb-12">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-4">
           {title}
@@ -47,13 +63,19 @@ export function ProjectPost({
 
       {/* Main Image */}
       <div className="aspect-[16/9] relative rounded-2xl overflow-hidden mb-12 shadow-2xl">
-        <Image
-          src={images[0].src}
-          alt={images[0].alt}
-          fill
-          className="object-cover"
-          priority
-        />
+        <button
+          onClick={() => setSelectedImage(images[0])}
+          className="w-full h-full group"
+        >
+          <Image
+            src={images[0].src}
+            alt={images[0].alt}
+            fill
+            className="object-cover transition-transform group-hover:scale-105"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+        </button>
       </div>
 
       {/* Project Description */}
@@ -94,19 +116,30 @@ export function ProjectPost({
       {/* Image Gallery */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         {images.slice(1).map((image, index) => (
-          <div
+          <button
             key={index}
-            className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg"
+            onClick={() => setSelectedImage(image)}
+            className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg group"
           >
             <Image
               src={image.src}
               alt={image.alt}
               fill
-              className="object-cover transition-transform hover:scale-105"
+              className="object-cover transition-transform group-hover:scale-105"
             />
-          </div>
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+          </button>
         ))}
       </div>
+
+      {/* Image Viewer */}
+      {selectedImage && (
+        <ImageViewer
+          src={selectedImage.src}
+          alt={selectedImage.alt}
+          onClose={() => setSelectedImage(null)}
+        />
+      )}
     </article>
   );
 } 
