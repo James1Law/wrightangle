@@ -15,17 +15,20 @@ const projectCategories = [
   {
     title: "Conversions",
     description: "Complete property transformations, from loft conversions to garage conversions, maximising your living space.",
-    image: "/images/conversions.webp"
+    image: "/images/conversions.webp",
+    href: "/services#conversions"
   },
   {
     title: "Fitted Wardrobes",
     description: "Custom-designed storage solutions to maximise your space while maintaining aesthetic appeal.",
-    image: "/images/fitted-furniture.webp"
+    image: "/images/fitted-furniture.webp",
+    href: "/services#fitted-furniture"
   },
   {
     title: "Decking",
     description: "Beautiful outdoor living spaces created with high-quality materials and expert craftsmanship.",
-    image: "/images/decking.webp"
+    image: "/images/decking.webp",
+    href: "/services#exterior"
   }
 ];
 
@@ -67,44 +70,25 @@ export function PreviousWork() {
                   key={category.title}
                   className="group relative aspect-[4/3] overflow-hidden rounded-2xl"
                 >
-                  {category.href ? (
-                    <Link href={category.href} className="block h-full">
-                      <Image
-                        src={category.image}
-                        alt={category.title}
-                        fill
-                        className="object-cover transition-transform group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/25 p-6 flex flex-col justify-end backdrop-blur-[2px]">
-                        <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">
-                          {category.title}
-                        </h3>
-                        <p className="text-base text-white font-medium drop-shadow-lg">
-                          {category.description}
-                        </p>
-                        <span className="text-sm font-medium text-primary-100 mt-3 flex items-center gap-1 drop-shadow">
-                          View Project <ArrowRight className="h-4 w-4" />
-                        </span>
-                      </div>
-                    </Link>
-                  ) : (
-                    <>
-                      <Image
-                        src={category.image}
-                        alt={category.title}
-                        fill
-                        className="object-cover transition-transform group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/25 p-6 flex flex-col justify-end backdrop-blur-[2px]">
-                        <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">
-                          {category.title}
-                        </h3>
-                        <p className="text-base text-white font-medium drop-shadow-lg">
-                          {category.description}
-                        </p>
-                      </div>
-                    </>
-                  )}
+                  <Link href={category.href} className="block h-full">
+                    <Image
+                      src={category.image}
+                      alt={category.title}
+                      fill
+                      className="object-cover transition-transform group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/25 p-6 flex flex-col justify-end">
+                      <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">
+                        {category.title}
+                      </h3>
+                      <p className="text-base text-white font-medium drop-shadow-lg">
+                        {category.description}
+                      </p>
+                      <span className="text-sm font-medium text-white mt-3 flex items-center gap-1 drop-shadow group-hover:underline">
+                        View Project <ArrowRight className="h-4 w-4" />
+                      </span>
+                    </div>
+                  </Link>
                 </div>
               ))}
             </div>
