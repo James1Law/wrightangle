@@ -59,10 +59,10 @@ export function About() {
               <div className="sticky top-8">
                 <div className="relative h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/about-us.webp"
-                    alt="Wright Angle Carpentry craftsmanship showcase"
+                    src="/images/theteam.JPG"
+                    alt="The Wright Angle Carpentry team"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     priority
                   />
                 </div>
@@ -102,10 +102,10 @@ export function About() {
           <div className="mt-12 lg:hidden">
             <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/about-us.webp"
-                alt="Wright Angle Carpentry craftsmanship showcase"
+                src="/images/theteam.JPG"
+                alt="The Wright Angle Carpentry team"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 priority
               />
             </div>

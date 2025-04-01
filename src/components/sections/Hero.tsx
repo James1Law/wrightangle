@@ -89,10 +89,10 @@ export function Hero() {
               <div className="sticky top-8">
                 <div className="relative h-[700px] w-full rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/hero2.webp"
-                    alt="Wright Angle Carpentry craftsmanship showcase"
+                    src="/images/james1.JPG"
+                    alt="James Wright, founder of Wright Angle Carpentry"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     priority
                   />
                 </div>
@@ -126,10 +126,10 @@ export function Hero() {
           <div className="mt-12 lg:hidden">
             <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/hero2.webp"
-                alt="Wright Angle Carpentry craftsmanship showcase"
+                src="/images/james1.JPG"
+                alt="James Wright, founder of Wright Angle Carpentry"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 priority
               />
             </div>
