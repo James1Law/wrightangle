@@ -35,7 +35,7 @@ export function About() {
                   </h2>
                 </div>
                 <p className="text-lg leading-8 text-gray-600">
-                  We take great pleasure in collaborating with our clients, carefully listening to their vision and requirements. Whether it&apos;s smaller projects like hanging doors and repairing floorboards, or larger undertakings such as extensions, every commission receives our utmost attention. Understanding that budgets are important, particularly in today&apos;s economic climate, we work diligently to source the best materials at competitive prices whilst never compromising on quality or craftsmanship.
+                  At Wright Angle Carpentry, we believe in building lasting relationships with our clients through attentive collaboration and genuine understanding of their aspirations. From essential carpentry work such as door installations and floor repairs, to ambitious extension projects, we approach each commission with the same dedication to excellence. Recognising that value matters, especially in the current economic landscape, we expertly balance cost-effectiveness with superior craftsmanship, sourcing premium materials at competitive prices to deliver exceptional results.
                 </p>
                 <div className="mt-8">
                   <Button 
